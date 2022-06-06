@@ -1,0 +1,67 @@
+.header {
+	position: fixed;
+	z-index: 7;
+	&__content {
+		max-height: 90px;
+		max-width: 1920px;
+		width: 100vw;
+		height: 100vh;
+		background-color: #181818;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	a {
+		color: #fff;
+		cursor: pointer;
+		padding: 10px 20px;
+		transition: 0.2s all linear;
+		&:hover {
+			background-color: #fff;
+			letter-spacing: 0.4px;
+			color: #000;
+			font-size: 16px;
+			border-radius: 14px;
+		}
+	}
+	&__logo {
+		margin-left: 50px;
+	}
+	&__menu {
+	}
+	&__menu-item:not(:last-child) {
+		margin-right: 32px;
+		font-size: 13px;
+	}
+	.burger__menu {
+		transform: translateX(500%);
+		transition: 0.5s all linear;
+		box-shadow: -7px -7px 7px 0px rgba(0, 0, 0, 0.55);
+		z-index: 5;
+		height: 100vh;
+		width: 50vw;
+		background-color: rgba(#000, 0.9);
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: none;
+		flex-direction: column;
+		align-items: flex-end;
+		&-item {
+			display: inline-block;
+			margin: auto;
+			font-size: 25px;
+			cursor: pointer;
+			padding: 55px;
+			text-align: center;
+		}
+	}
+	&__scrolling {
+		opacity: 0.9;
+	}
+	.burger__menu--active {
+		display: flex;
+		transform: translateX(0%);
+	}
+}
